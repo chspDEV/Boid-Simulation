@@ -1,33 +1,47 @@
-# Simulacao_multithread
+# Simulação do Algoritmo Boids com LibGDX
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+![Linguagem](https://img.shields.io/badge/Java-100%25-orange)
+![Framework](https://img.shields.io/badge/Framework-LibGDX-red)
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-green)
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+> Uma simulação gráfica do algoritmo "Boids" de Craig Reynolds, que modela o comportamento de bando de pássaros (ou cardumes de peixes).
 
-## Platforms
+## 🎯 Objetivo
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+O projeto demonstra visualmente os princípios do comportamento emergente. Cada "boid" (agente) toma decisões de forma independente, baseando-se apenas em seus vizinhos locais. A interação dessas decisões simples resulta em um comportamento de bando complexo e realista, sem nenhuma coordenação centralizada.
 
-## Gradle
+## ✨ As 3 Regras dos Boids
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+A simulação é baseada nas três regras clássicas que cada agente segue:
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
+1.  **Separação (Separation):** Mover-se para evitar aglomeração e colisão com os agentes vizinhos.
+2.  **Alinhamento (Alignment):** Mover-se na mesma direção média que os agentes vizinhos.
+3.  **Coesão (Cohesion):** Mover-se em direção à posição média (centro de massa) dos agentes vizinhos.
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+## 🛠️ Tecnologias Utilizadas
+
+-   **Linguagem:** Java
+-   **Framework de Jogo:** LibGDX
+-   **Automação de Build:** Gradle
+
+## ⚙️ Como Executar
+
+O projeto utiliza o Gradle Wrapper, então não é necessário ter o Gradle instalado na máquina.
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/chspDEV/simulacao-boids.git](https://github.com/chspDEV/simulacao-boids.git)
+    ```
+2.  **Acesse a pasta do projeto:**
+    ```bash
+    cd simulacao-boids
+    ```
+3.  **Execute o projeto:**
+    * No Windows:
+        ```bash
+        gradlew.bat run
+        ```
+    * No Linux ou macOS:
+        ```bash
+        ./gradlew run
+        ```
